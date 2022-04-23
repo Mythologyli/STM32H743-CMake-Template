@@ -181,14 +181,14 @@ SECTIONS
   /* RAM_D2 block */
   .ram_d2_block (NOLOAD) :
   {
-    KEEP(*(.ram1section))
+    KEEP(*(.ram_d2_block))
   } >RAM_D2
 
 
   /* RAM_D3 block */
   .ram_d3_block (NOLOAD) :
   {
-    KEEP(*(.ram2section))
+    KEEP(*(.ram_d3_block))
   } >RAM_D3
 
 
