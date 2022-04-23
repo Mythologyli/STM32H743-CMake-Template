@@ -204,7 +204,7 @@ static BaseType_t prvThreeParameterEchoCommand(char *pcWriteBuffer, size_t xWrit
         memset(pcWriteBuffer, 0x00, xWriteBufferLen);
         sprintf(pcWriteBuffer, "%d: ", (int) uxParameterNumber);
         strncat(pcWriteBuffer, pcParameter, (size_t) xParameterStringLength);
-        strncat(pcWriteBuffer, "\r\n", strlen("\r\n"));
+        strcat(pcWriteBuffer, "\r\n");
 
         if (uxParameterNumber == 3U)
         {
@@ -252,7 +252,7 @@ static BaseType_t prvParameterEchoCommand(char *pcWriteBuffer, size_t xWriteBuff
             memset(pcWriteBuffer, 0x00, xWriteBufferLen);
             sprintf(pcWriteBuffer, "%d: ", (int) uxParameterNumber);
             strncat(pcWriteBuffer, (char *) pcParameter, (size_t) xParameterStringLength);
-            strncat(pcWriteBuffer, "\r\n", strlen("\r\n"));
+            strcat(pcWriteBuffer, "\r\n");
 
             xReturn = pdTRUE;
             uxParameterNumber++;
