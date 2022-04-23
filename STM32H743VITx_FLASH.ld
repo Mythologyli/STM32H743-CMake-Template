@@ -53,10 +53,10 @@
 ENTRY(Reset_Handler)
 
 /* Highest address of the user mode stack */
-_estack = ORIGIN(DTCMRAM) + LENGTH(DTCMRAM);    /* end of RAM */
+_estack = ORIGIN(RAM_D1) + LENGTH(RAM_D1);    /* end of RAM */
 /* Generate a link error if heap and stack don't fit into RAM */
-_Min_Heap_Size = 0xF000;      /* required amount of heap  */
-_Min_Stack_Size = 0xF000; /* required amount of stack */
+_Min_Heap_Size = 0x20000;      /* required amount of heap  */
+_Min_Stack_Size = 0x10000; /* required amount of stack */
 
 /* Specify the memory areas */
 MEMORY
@@ -175,9 +175,23 @@ SECTIONS
     . = . + _Min_Heap_Size;
     . = . + _Min_Stack_Size;
     . = ALIGN(8);
-  } >DTCMRAM
+  } >RAM_D1
 
-  
+
+  /* RAM_D2 block */
+  .ram_d2_block (NOLOAD) :
+  {
+    KEEP(*(.ram1section))
+  } >RAM_D2
+
+
+  /* RAM_D3 block */
+  .ram_d3_block (NOLOAD) :
+  {
+    KEEP(*(.ram2section))
+  } >RAM_D3
+
+
 
   /* Remove information from the standard libraries */
   /DISCARD/ :
