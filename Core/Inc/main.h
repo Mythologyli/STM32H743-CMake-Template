@@ -86,6 +86,8 @@ extern void lv_port_disp_init(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define SD_Detect_Pin GPIO_PIN_3
+#define SD_Detect_GPIO_Port GPIOE
 #define Led2_Pin GPIO_PIN_1
 #define Led2_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
