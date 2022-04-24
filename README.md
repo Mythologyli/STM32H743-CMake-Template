@@ -9,3 +9,4 @@ A template for developing projects for STM32H743 with [CLion](https://www.jetbra
 + [FreeRTOS](https://www.freertos.org/) + [CMSIS V2](https://www.keil.com/pack/doc/CMSIS/RTOS2/html/index.html)
 + ILI9341 on SPI2
 + [LVGL](https://lvgl.io/)
++ SDMMC and [FatFs](http://elm-chan.org/fsw/ff/00index_e.html)
