@@ -6,6 +6,6 @@ A template for developing projects for STM32H743 with CLion and STM32CubeMX.
 
 + PA1 - LED
 + USART2/USB - Serial console, printf redirection
-+ FreeRTOS
++ [FreeRTOS](https://www.freertos.org/) + [CMSIS V2](https://www.keil.com/pack/doc/CMSIS/RTOS2/html/index.html)
 + ILI9341 on SPI2
-+ LVGL
++ [LVGL](https://lvgl.io/)
