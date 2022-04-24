@@ -96,7 +96,7 @@ extern void lv_port_disp_init(void);
 #define Led2_Off HAL_GPIO_WritePin(Led2_GPIO_Port, Led2_Pin, GPIO_PIN_SET)
 #define Led2_Toggle HAL_GPIO_TogglePin(Led2_GPIO_Port, Led2_Pin)
 
-#define ENABLE_FREERTOS_CLI 0
+#define ENABLE_FREERTOS_CLI 1
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
