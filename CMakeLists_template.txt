@@ -51,10 +51,11 @@ endif ()
 include_directories(
     ${includes}
     Applications/Inc
+    Libraries
     Libraries/FreeRTOS-Plus-CLI
     Libraries/ILI9341
     Libraries/lvgl
-    Libraries/lvgl/src/demos
+    Libraries/lvgl/demos
     )
 
 add_definitions(${defines})
